@@ -57,26 +57,19 @@
 Раздел для самостоятельной подготовки перед началом (и в процессе) курса. Он помогает выровнять базу по машинному и глубокому обучению, а также освежить ключевые факты по математике и программированию.
 
 ### Machine Learning (База)
-
-| Блок | Подтемы | Ссылки на материалы |
-|---|---|---|
-| **Введение в ML** | Постановка задач, различие supervised и unsupervised подходов | [Конспект](), [Лекция Соколова]() |
-| **Линейные модели** | Линейная регрессия, логистическая регрессия, основные функции потерь | [Учебник Яндекса](), [Лекция]() |
-| **Оптимизация** | Градиентный спуск, стохастический градиентный спуск (SGD) и его extensions | [Учебник Яндекса](), [Лекция]() |
-| **Классификация** | Линейная классификация, метрики качества (Accuracy, Precision/Recall, ROC-AUC) | [Конспект](), [Лекция]() |
-| **Обобщающая способность** | Переобучение, недообучение, L1 и L2 регуляризация | [Конспект](), [Лекция]() |
-| **Деревья и ансамбли** | Решающие деревья, случайный лес, градиентный бустинг | [Учебник Яндекса](), [Лекция]() |
+[Учебник Яндекса по ML](https://education.yandex.ru/handbook/ml/article/linear-models)
+[Курс Е.А. Соколова](https://github.com/esokolov/ml-course-hse/tree/master)
 
 ### Deep Learning (База)
 
 | Блок | Подтемы | Ссылки на материалы |
 |---|---|---|
-| **Основы нейросетей** | Линейные слои, полносвязные сети, перцептрон | [Лекция ФКН](), [Учебник Яндекса]() |
-| **Обучение** | Backpropagation, интуиция и визуализация градиентного спуска | [3Blue1Brown](), [Видео IBM](), [Учебник Яндекса]() |
-| **Практика PyTorch** | Определение архитектуры модели, цикл обучения, работа с датасетами | [Туториал PyTorch](), [Ноутбук]() |
-| **Регуляризация и слои** | BatchNorm, Dropout, функции активации | [Разбор BN](), [Разбор Dropout](), [Плейлист основ DL]() |
-| **Сверточные сети (CNN)** | Принцип работы свертки, pooling, residual connections | [3Blue1Brown](), [Лекция ИАД](), [Учебник Яндекса]() |
-| **Работа с последовательностями**| Разбор RNN, LSTM, проблема затухающего градиента, запуск на текстах | [Статья Habr](), [Видео LSTM](), [Учебник Яндекса]() |
+| **Основы нейросетей** | Линейные слои, полносвязные сети, функции активации | [Лекция ФКН](https://github.com/isadrtdinov/intro-to-dl-hse/blob/2023-2024/lecture-notes/notes-01-mlp.pdf), [Учебник Яндекса](https://education.yandex.ru/handbook/ml/article/nejronnye-seti) |
+| **Обучение** | Backpropagation, интуиция и визуализация градиентного спуска | [3Blue1Brown](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi), [Видео IBM](https://www.youtube.com/watch?v=S5AGN9XfPK4), [Учебник Яндекса](https://education.yandex.ru/handbook/ml/article/metod-obratnogo-rasprostraneniya-oshibki) |
+| **Практика PyTorch** | Определение архитектуры модели, цикл обучения, работа с датасетами | [Туториал PyTorch](https://pytorch.org/tutorials/beginner/pytorch_with_examples.html#pytorch-custom-nn-modules) |
+| **Регуляризация и слои** | BatchNorm, Dropout, функции активации | [Первый](https://towardsdatascience.com/batch-norm-explained-visually-how-it-works-and-why-neural-networks-need-it-b18919692739?gi=f49f49297ad9) и [Второй](http://vbystricky.ru/2020/05/batch_normalization.html) разбор BN, [Разбор Dropout](https://habr.com/ru/companies/wunderfund/articles/330814/), [Плейлист основ DL](https://youtube.com/playlist?list=PLTl9hO2Oobd-GaTYQWIuIs2yyNy7TYbEj&si=9I95glZquxts92Hm), [Лекция ФКН](https://github.com/isadrtdinov/intro-to-dl-hse/blob/2023-2024/lecture-notes/notes-02-dropout-batchnorm.pdf) |
+| **Сверточные сети (CNN)** | Принцип работы свертки, pooling, residual connections | [3Blue1Brown](https://www.youtube.com/watch?v=KuXjwB4LzSA), [Лекция ИАД](https://www.youtube.com/watch?v=Vcz8C8Q-1og), [Лекция ФКН](https://github.com/isadrtdinov/intro-to-dl-hse/blob/2023-2024/lecture-notes/notes-04-convolution.pdf), [Учебник Яндекса](https://education.yandex.ru/handbook/ml/article/svyortochnye-nejroseti), [Residual connections](https://www.youtube.com/watch?v=o_3mboe1jYI) |
+| **Работа с последовательностями**| Разбор RNN, LSTM, проблема затухающего градиента, запуск на текстах | [Топ разбор](https://sysblok.ru/knowhow/mama-myla-lstm-kak-ustroeny-rekurrentnye-nejroseti-s-dolgoj-kratkosrochnoj-pamjatju/), [Статья Habr](https://habr.com/ru/articles/567142/), [Видео LSTM](https://www.youtube.com/watch?v=Kv4NyVW9IZ4), [Учебник Яндекса](https://education.yandex.ru/handbook/ml/article/nejroseti-dlya-raboty-s-posledovatelnostyami) |
 
 ***
 
