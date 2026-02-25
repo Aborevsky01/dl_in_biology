@@ -1,0 +1,18 @@
+# приватные ключи
+*.key
+*.pem
+*.p12
+*.pfx
+*.kdb
+*.der
+
+# ssh / pgp
+id_*
+*.asc
+
+# env/секреты
+.env
+*.env
+*secret*
+*credentials*
+
