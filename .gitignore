@@ -16,3 +16,7 @@ id_*
 *secret*
 *credentials*
 
+.DS_Store
+.ipynb_checkpoints
+.pptx
+
