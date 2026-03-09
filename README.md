@@ -41,7 +41,7 @@
 | 2 | –                                         | Основы ML                                  | [Лекция 2](lectures/2.ML.pdf)                                                                     | [Ссылка]()     |
 | 3 | –                                         | Основы DL                                  | [Лекция 3](lectures/3.DL.pdf)                                                                     | [Ссылка]()     |
 | 4 | Хроматин, транскрипция                    | Модели для последовательностей (обзор)    | [Лекция 4](lectures/4.Chromatine.pdf)                                                             | [Ссылка]()     |
-| 5 | Пост‑транскрипция                         | CNN, LSTM для ДНК, mlflow                 | [Лекция 5](lectures/5.Post-Transcription.pdf)                                                     | [Ссылка]()     |
+| 5 | Пост‑транскрипция                         | CNN, LSTM для ДНК, mlflow                 | [Лекция 5](lectures/5.Post-Transcription.pdf), [Seminar DNA](seminars/Seminar_I_DNA_classification.ipynb)                                                    | [Ссылка]()     |
 | 6 | -                                         | NLP, Attention, Transformers               | [Лекция 6](lectures/6.NLP.pdf)                                                     | [Ссылка]()     |
 | 7 | Трансляция                                | CNN XAI, GNN, optuna                      | [Лекция 7](lectures/7.Translation.pdf), [Seminar GNN](seminars/Seminar_2_GNN_for_ZDNA.ipynb)      | [Ссылка]()     |
 | 8 | Белки                                     | CV for Med, XAI, mlflow                   | [Презентация](), [Семинар]()                                                                      | [Ссылка]()     |
