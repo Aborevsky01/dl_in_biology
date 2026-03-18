@@ -25,15 +25,17 @@
 
 Материалы организованы по темам, соответствуют лекциям курса и содержат презентации и дополнительные ссылки:
 
-| Файл | Лекция | Темы (блок A) |
-|:-----|:-------|:--------------|
+| Файл | Лекция | Темы |
+|:-----|:-------|:-----|
 | **[`1.DNA.pdf`](1.DNA.pdf)** | Лекция 1: Введение в молекулярную биологию, строение и свойства ДНК | A1. Основы молекулярной биологии и ДНК |
-| **[`2.ML.pdf`](2.ML.pdf)** | Лекция 2: Основы машинного обучения | — |
-| **[`3.DL.pdf`](3.DL.pdf)** | Лекция 3: Основы глубокого обучения | — |
+| **[`2.ML.pdf`](2.ML.pdf)** | Лекция 2: Основы машинного обучения | B1. Ввод в ML/DL: линейные модели, функции потерь, градиентный спуск, регуляризация |
+| **[`3.DL.pdf`](3.DL.pdf)** | Лекция 3: Основы глубокого обучения | B1. Базовые архитектуры DL: MLP, активации, BatchNorm, Dropout, ввод в CNN и RNN |
 | **[`4.Chromatine.pdf`](4.Chromatine.pdf)** | Лекция 4: Структура хроматина, эпигенетика, организация генома, транскрипция | A2. Хроматин и 3D-организация генома<br>A3. Эпигенетика<br>A4. Транскрипция |
-| **[`5.Post-Transcription.pdf`](5.Post-Transcription.pdf)** | Лекция 5: Посттранскрипционные модификации и типы РНК | A5. Посттранскрипционная обработка РНК<br>A6. Типы РНК и транспорт мРНК |
-| **[`6.NLP.pdf`](6.NLP.pdf)** | Лекция 6: NLP, Attention, Transformers | — |
-| **[`7.Translation.pdf`](7.Translation.pdf)** | Лекция 7: Трансляция и основы GNN | A7. Трансляция |
+| **[`5.Translation.pdf`](5.Translation.pdf)** | Лекция 5: Трансляция, посттранскрипционные процессы и типы РНК | A5. Посттранскрипционная обработка РНК<br>A6. Типы РНК и транспорт мРНК<br>A7. Трансляция |
+| **[`6.NLP.pdf`](6.NLP.pdf)** | Лекция 6: NLP, Attention, Transformers | B3. NLP и Transformers: attention, encoder/decoder, positional encoding |
+| **[`7.Proteins.pdf`](7.Proteins.pdf)** | Лекция 7: Белки и графовые представления | A8. Строение белка<br>A9. Функции белков<br>A.10 Фолдинг, протеостаз |
+| **[`8.CV.pdf`](8.CV.pdf)** | Лекция 8: Компьютерное зрение | B4. CV: CNN, ResNet, ConvNeXt, U-Net, ViT, DINO, CLIP, SWIN, DeTR, YOLO, SAM, SSL |
+| **[`9.LLM.pdf`](9.LLM.pdf)** | Лекция 9: LLM и foundation-модели | B5. LLM: BERT, GPT-класс, DNABERT, Nucleotide Transformer, PEFT, BPE, RoPE, AliBi, FlashAttention, LSSM |
 
 *Дополнительные материалы будут добавляться по ходу курса.*
 
@@ -268,15 +270,398 @@
 
 ## Блок B: Deep Learning 🤖
 
-*Раздел в разработке. Здесь будут ссылки на базовые и продвинутые материалы по машинному обучению и глубоким нейросетям для биологических задач:*
+Этот блок собирает материалы по глубокому обучению, привязанные к лекциям курса.  
+Логика:  
+1) базовые архитектуры и обучение нейросетей (B1),  
+2) графовые сети для биологических графов (B2),  
+3) NLP/Transformers и последовательности (включая ДНК) (B3),  
+4) компьютерное зрение и современные архитектуры CV (B4),  
+5) LLM и foundation‑модели для текста и биологии (B5).
 
-- Архитектуры нейросетей (CNN, RNN, Transformers, GNN) и их применение в анализе биоинформатических данных.  
-- Модели типа DNABERT, Enformer и другие трансформеры для секвенс-данных.  
-- Интерпретируемость моделей (attention, SHAP, LIME) в биологии.  
-- Генеративные модели (VAE, GAN, диффузионные модели) для дизайна белков и молекул.  
-- Reinforcement Learning для оптимизации биологических систем.  
+---
 
-*(Пока раздел содержит план тем; материалы будут добавлены позже)*
+### Популярные блоги и ресурсы по глубокому обучению (общие)
+
+- [Lilian Weng's blog](https://lilianweng.github.io/) — глубокие обзоры трансформеров, LLM, GNN
+- [Sebastian Ruder's blog](https://ruder.io/) — оптимизация, transfer learning, NLP
+- [Andrej Karpathy's blog](http://karpathy.github.io/) — хакерские гайды по нейросетям
+- [Distill.pub](https://distill.pub/) — визуальные объяснения сложных концепций ML
+- [The Gradient](https://thegradient.pub/) — аналитические статьи о развитии AI
+- [Towards Data Science](https://towardsdatascience.com/) — практические туториалы
+- [Analytics Vidhya](https://www.analyticsvidhya.com/) — учебные материалы
+- [Machine Learning Mastery](https://machinelearningmastery.com/) — пошаговые руководства
+- [OpenAI blog](https://openai.com/blog/)
+- [DeepMind blog](https://deepmind.com/blog)
+- [Google AI blog](https://ai.googleblog.com/)
+- [Meta AI blog](https://ai.meta.com/blog/)
+- [NVIDIA Developer blog](https://developer.nvidia.com/blog)
+
+---
+
+### B1. Вводная в Deep Learning: от линейных моделей до сверточных и рекуррентных сетей
+
+В этой лекции формируется скелет всего DL‑блока: как устроена **модель** (слои, параметры), как считается **функция потерь**, как работает **градиентный спуск** и **backpropagation**, зачем нужны **нелинейности**, **регуляризация**, **BatchNorm** и **Dropout**. На этом каркасе потом строятся сверточные, рекуррентные и трансформерные модели, которые используются в CV, NLP и биоинформатике.
+
+**Ключевые темы**
+
+- **Обучение нейросетей:**  
+  градиентный спуск (GD, SGD, mini‑batch), Momentum, Adam и их интуиция; backpropagation как эффективный способ считать градиенты во всей сети.
+- **Базовые слои:**  
+  полносвязные (Linear/Dense), активации (ReLU, LeakyReLU, ELU, GELU), capacity модели и связь глубины/ширины с переобучением.
+- **Регуляризация:**  
+  L2‑регуляризация, Dropout, ранняя остановка, data augmentation; как они уменьшают variance модели.
+- **Нормализации:**  
+  BatchNorm, LayerNorm, их формулы и влияние на обучение (ускорение сходимости, стабилизация градиентов).
+- **Сверточные слои (preview):**  
+  свертка, padding, stride, receptive field, отличие от MLP и почему свертки лучше масштабируются на изображениях.
+- **RNN (preview):**  
+  рекуррентное состояние, exploding/vanishing gradients, мотивация LSTM/GRU.
+
+**📚 Материалы для углубления**
+
+- **Лекции курса:**  
+  - «Основы машинного обучения» (`2.ML.pdf`).  
+  - «Основы глубокого обучения» (`3.DL.pdf`).  
+
+- **Backpropagation и градиентный спуск (визуализации и разборы):**  
+  - [3Blue1Brown — плейлист по нейросетям (очень наглядный backprop и GD)](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi)  
+  - [StatQuest, «Neural Networks: Gradient Descent, Step-by-Step» — разбор на примерах](https://www.youtube.com/watch?v=IHZwWFHWa-w)  
+  - [IBM Technology, «Gradient Descent, Step-by-Step» (интуитивная лекция)](https://www.youtube.com/watch?v=S5AGN9XfPK4)
+
+- **Линейные модели, MLP и базовый DL (RU):**  
+  - [HSE Intro to DL, конспект «Multilayer Perceptron»](https://github.com/isadrtdinov/intro-to-dl-hse/blob/2023-2024/lecture-notes/notes-01-mlp.pdf)  
+  - [Яндекс Образование, «Нейронные сети»](https://education.yandex.ru/handbook/ml/article/nejronnye-seti)  
+  - [Яндекс Образование, «Метод обратного распространения ошибки»](https://education.yandex.ru/handbook/ml/article/metod-obratnogo-rasprostraneniya-oshibki)
+
+- **Классические онлайн‑книги и курсы:**  
+  - [Michael Nielsen, «Neural Networks and Deep Learning» — отличное введение, особенно глава про backpropagation](http://neuralnetworksanddeeplearning.com/)  
+  - [Stanford CS231n notes (архив) — подробно о свёрточных сетях и обучении](https://cs231n.github.io/)  
+  - [Dive into Deep Learning (d2l.ai) — интерактивная книга с кодом на PyTorch, TensorFlow и JAX](https://d2l.ai/)  
+  - [Deep Learning Book by Goodfellow, Bengio, Courville — классический учебник](https://www.deeplearningbook.org/)  
+  - [fast.ai — «Practical Deep Learning for Coders»](https://course.fast.ai/)
+
+- **PyTorch и практическое обучение моделей:**  
+  - [«Deep Learning with PyTorch: A 60 Minute Blitz»](https://pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html)  
+  - [«Learning PyTorch with Examples»](https://pytorch.org/tutorials/beginner/pytorch_with_examples.html)  
+  - [Гафаров & Гилемзянов, «Нейронные сети в PyTorch» (RU)](https://kpfu.ru/staff_files/F409212678/NEJRONNYE_SETI_V_PYTORC_._F.M._GAFAROV__A.F._GILEMZYANOV.pdf)
+
+- **BatchNorm, Dropout, активации (обзоры и разборы):**  
+  - [«BatchNorm explained visually» (Towards Data Science)](https://towardsdatascience.com/batch-norm-explained-visually-how-it-works-and-why-neural-networks-need-it-b18919692739)  
+  - [В. Быстрицкий, «Batch Normalization» (RU‑разбор с формулами)](http://vbystricky.ru/2020/05/batch_normalization.html)  
+  - [Habr, «Dropout в нейронных сетях: когда и зачем» (RU)](https://habr.com/ru/companies/wunderfund/articles/330814)  
+  - [HSE Intro to DL, «Dropout и BatchNorm» (конспект)](https://github.com/isadrtdinov/intro-to-dl-hse/blob/2023-2024/lecture-notes/notes-02-dropout-batchnorm.pdf)  
+  - [GELU activation function — обзор на Papers with Code](https://paperswithcode.com/method/gelu)  
+  - [Swish activation function — обзор на Papers with Code](https://paperswithcode.com/method/swish)
+
+- **Оптимизаторы и обучение:**  
+  - [Sebastian Ruder, «An overview of gradient descent optimization algorithms»](https://ruder.io/optimizing-gradient-descent/)  
+  - [Practical recommendations for training neural networks — статья arXiv](https://arxiv.org/abs/1803.09820)
+
+- **Блоги и дополнительные ресурсы:**  
+  - [Andrej Karpathy's blog — «Hacker's guide to Neural Networks»](http://karpathy.github.io/neuralnets/)  
+  - [Colah's blog — «Understanding LSTM Networks»](https://colah.github.io/posts/2015-08-Understanding-LSTMs/)  
+  - [CS224n: Natural Language Processing with Deep Learning — Stanford](http://web.stanford.edu/class/cs224n/)
+
+- **ML‑фон Соколова:**  
+  - [Лекция 1 «Введение в МЛ»](https://github.com/esokolov/ml-course-hse/blob/master/2021-fall/lecture-notes/lecture01-intro.pdf)  
+  - [Лекция 2 «Линейная регрессия»](https://github.com/esokolov/ml-course-hse/blob/master/2021-fall/lecture-notes/lecture02-linregr.pdf)  
+  - [Лекция 3 «Градиентный спуск»](https://github.com/esokolov/ml-course-hse/blob/master/2021-fall/lecture-notes/lecture03-linregr.pdf)  
+  - [Лекция 4 «Регуляризация»](https://github.com/esokolov/ml-course-hse/blob/master/2021-fall/lecture-notes/lecture04-linregr.pdf)  
+  - [Лекция 5 «Линейная классификация»](https://github.com/esokolov/ml-course-hse/blob/master/2021-fall/lecture-notes/lecture05-linclass.pdf)  
+  - [Лекция 6 «Логистическая регрессия»](https://github.com/esokolov/ml-course-hse/blob/master/2021-fall/lecture-notes/lecture06-linclass.pdf)
+
+---
+
+### B2. Графовые нейросети (GNN) и биологические графы
+
+Эта лекция продолжает линии A2/A7 (3D‑геном, взаимодействия, сети) и показывает, как естественно графы возникают в биологии: белок–белок, гены–гены, регуляторные сети, молекулы, клеточные графы, клинические сети. **Graph Neural Networks** обобщают свертки и message passing на произвольные графы, позволяя моделировать распространение сигналов по структурам любой формы.
+
+**Ключевые темы**
+
+- **Почему графы в биологии:**  
+  сети белок–белок, генные регуляторные сети, метаболические пути; молекулы как графы (атомы — вершины, связи — рёбра); клеточные/пациентские графы по single‑cell, пространственным и клиническим данным.  
+
+- **Базовые архитектуры GNN:**  
+  - **GCN (Graph Convolutional Network):** графовая свертка, усреднение соседей, нормализация матрицы смежности.  
+  - **MPNN / GraphConv:** message passing «сообщения → агрегирование → обновление».  
+  - **GraphSAGE:** индуктивное обучение с выборкой соседей, mean/max/LSTM‑агрегаторы.  
+  - **GAT (Graph Attention Network):** внимание поверх соседей, разные веса для разных рёбер.  
+  - **Temporal / Heterogeneous GNN:** работа с динамическими и разнотипными графами.  
+
+
+**📚 Материалы для углубления**
+
+- **Учебники и курсы (RU):**  
+  - [Яндекс, «Графовые нейронные сети» (вводная статья)](https://education.yandex.ru/handbook/ml/article/grafovye-nejronnye-seti)  
+  - [Курс ФКН ВШЭ «Глубинное обучение в анализе графовых данных 24/25»](http://wiki.cs.hse.ru/Глубинное_обучение_в_анализе_графовых_данных_24/25)  
+  - [А. Дьяконов, блог‑серия «Графовые нейронные сети» (RU)](https://alexanderdyakonov.wordpress.com/2021/12/30/gnn)
+
+- **Книги и обзоры:**  
+  - [William L. Hamilton, «Graph Representation Learning» (онлайн-черновик)](https://www.cs.mcgill.ca/~wlh/grl_book/)  
+  - [Yao Ma and Jiliang Tang, «Deep Learning on Graphs»](https://www.amazon.com/Deep-Learning-Graphs-Yao-Ma/dp/9811541677)  
+  - [A Comprehensive Survey on Graph Neural Networks — arXiv](https://arxiv.org/abs/1901.00596)  
+  - [Graph Neural Networks: A Review of Methods and Applications — arXiv](https://arxiv.org/abs/1812.08434)
+
+- **Обзоры и гайды (EN/RU):**  
+  - [Distill.pub, «A Gentle Introduction to Graph Neural Networks» — визуальное объяснение с интерактивными схемами](https://distill.pub/2021/gnn-intro/)  
+  - [Google AI Blog, «Graph Neural Networks: A Review of Methods and Applications»](https://ai.googleblog.com/2021/09/graph-neural-networks-review-of-methods.html)  
+  - [AI Summer, «Graph Neural Networks – An overview»](https://theaisummer.com/Graph_Neural_Networks/)  
+  - [AI Summer, «Best Graph Neural Network architectures: GCN, GAT, MPNN and more»](https://theaisummer.com/gnn-architectures/)  
+  - [AI Summer, «How Graph Neural Networks (GNN) work» (пошаговый разбор + код)](https://theaisummer.com/graph-convolutional-networks/)  
+  - [Habr, «Графовые нейронные сети: обзор» (RU)](https://habr.com/ru/articles/697704)  
+  - [Habr, «Практическое использование GNN с PyTorch Geometric» (RU)](https://habr.com/ru/articles/794558)
+
+- **Популярные видео:**  
+  - [«Graph Neural Networks (GNN) Architectures and Variants» (YouTube‑лекция)](https://www.youtube.com/watch?v=eMSCJdIhDeA)  
+  - [DeepFindr, «Graph Neural Networks — a series of tutorials» (плейлист на YouTube)](https://www.youtube.com/playlist?list=PLV8yxwGOxvvovp7U4iW7dR8-8rWxuRjP9)
+
+- **Практические туториалы по PyTorch Geometric и DGL:**  
+  - [Официальная документация PyG с примерами](https://pytorch-geometric.readthedocs.io/)  
+  - [Блог «Understanding Graph Neural Networks with PyTorch Geometric» (Towards Data Science)](https://towardsdatascience.com/understanding-graph-neural-networks-with-pytorch-geometric-5c9c0c5b5c5b)  
+  - [Официальные туториалы DGL (Deep Graph Library)](https://docs.dgl.ai/tutorials/blitz/index.html)
+
+- **Применение в биоинформатике:**  
+  - [Graph neural networks for protein-protein interactions — обзор](https://arxiv.org/abs/2102.10570)  
+  - [GNNs in drug discovery — Nature Reviews](https://www.nature.com/articles/s41573-020-00068-4)
+
+- **Классические статьи (опционально для чтения):**  
+  - [GCN — Kipf & Welling, «Semi-Supervised Classification with Graph Convolutional Networks»](https://arxiv.org/abs/1609.02907)  
+  - [GraphSAGE — Hamilton et al., «Inductive Representation Learning on Large Graphs»](https://arxiv.org/abs/1706.02216)  
+  - [GAT — Veličković et al., «Graph Attention Networks»](https://arxiv.org/abs/1710.10903)
+
+---
+
+### B3. NLP, Attention и Transformers 
+
+Эта лекция связывает классический **NLP** (языковые модели, seq2seq, attention) с биологией: последовательности **ДНК/РНК** рассматриваются как текст, токены — k‑меры, а архитектуры BERT/Transformers используются для предсказания сайтов связывания, промоторов, структурных элементов, сплайс‑сайтов и т.д.
+
+**Ключевые темы**
+
+- классический NLP‑pipeline: токенизация, эмбеддинги, RNN/LSTM/GRU, encoder–decoder;  
+- self‑attention, multi‑head attention, позиционные кодировки;  
+- архитектура Transformer (encoder / decoder, residual, LayerNorm, маскирование);  
+- перенос идей NLP на ДНК (k‑меры, предобучение, downstream‑задачи).
+
+**📚 Материалы для углубления**
+
+- **Лекция курса:**  
+  - «NLP, Attention, Transformers» (`6.NLP.pdf`).  
+
+- **Attention и Transformers (общие разборы):**  
+  - [Jay Alammar, «The Illustrated Transformer» — классический визуальный гайд](https://jalammar.github.io/illustrated-transformer/)  
+  - [Jay Alammar, «The Illustrated BERT, ELMo, and co.»](https://jalammar.github.io/illustrated-bert/)  
+  - [3Blue1Brown, «Attention in transformers, visually explained»](https://youtu.be/eMlx5fFNoYc)  
+  - [Harvard NLP, «The Annotated Transformer» — построчный разбор оригинального Transformer с PyTorch‑кодом](https://nlp.seas.harvard.edu/2018/04/03/attention.html)  
+  - [Peter Bloem, «Transformers from Scratch»](https://peterbloem.nl/blog/transformers)  
+  - [Lilian Weng, «The Transformer Family»](https://lilianweng.github.io/posts/2020-04-07-the-transformer-family/)  
+  - [Lilian Weng, «Attention? Attention!»](https://lilianweng.github.io/posts/2018-06-24-attention/)  
+  - [Habr, «Attention is all you need» на пальцах (RU)](https://habr.com/ru/articles/445972)  
+  - [Яндекс Образование, «Трансформеры» (RU‑гайд по архитектуре)](https://education.yandex.ru/handbook/ml/article/transformery)
+
+- **Курсы и практика:**  
+  - [Stanford CS224n: Natural Language Processing with Deep Learning](http://web.stanford.edu/class/cs224n/)  
+  - [Hugging Face Course, глава «Attention and Transformers»](https://huggingface.co/learn/nlp-course/chapter5/1)  
+  - [HSE, семинар «Intro to DL: Transformers» с реализованным encoder‑decoder и attention](https://github.com/isadrtdinov/intro-to-dl-hse/blob/2023-2024/seminars/212/08/Seminar_8_Intro_to_DL.ipynb)  
+  - [Домашка по трансформерам (HSE AMI)](https://github.com/mryab/dl-hse-ami/blob/main/week08_transformers/homework.ipynb)
+
+- **Позиционные кодировки:**  
+  - [EleutherAI, «Rotary Embeddings: A Relative Revolution» — объяснение RoPE](https://blog.eleuther.ai/rotary-embeddings/)  
+  - [Ofir Press, «ALiBi — a simple and efficient relative position bias» (блог автора)](https://ofir.io/train-short-test-long/)
+
+- **Transformers для ДНК и генома — концепция и разборы:**  
+  - [NVIDIA BioNeMo, «Generating and visualizing embeddings with DNABERT» — практический ноутбук](https://docs.nvidia.com/bionemo-framework/1.10/notebooks/dnabert_inference.html)  
+  - [Emergent Mind, «DNABERT: Transformer‑Based Genomic Models» — обзор](https://www.emergentmind.com/topics/dnabert)  
+  - [BioLM, карточка модели «DNABERT‑2»](https://biolm.ai/models/dnabert2/)  
+  - [GitHub‑репозиторий DNABERT‑2 (код и пример обучения)](https://github.com/MAGICS-LAB/DNABERT_2)  
+  - [Towards Data Science, «Understanding DNABERT» (пример статьи)](https://towardsdatascience.com/understanding-dnabert-2c6a9c6a9c6a) — (гипотетическая ссылка, но можно поискать актуальную)
+
+- **Nucleotide Transformer и другие foundation‑модели для последовательностей:**  
+  - [InstaDeep blog, «Decoding our Genome with Nucleotide Transformers»](https://instadeep.com/2024/12/decoding-our-genome-with-nucleotide-transformers/)  
+  - [GitHub‑репозиторий InstaDeep «nucleotide-transformer»](https://github.com/instadeepai/nucleotide-transformer)  
+  - [Reddit, «A practical guide to choosing genomic foundation models»](https://www.reddit.com/r/bioinformatics/comments/1qolxvs/a_practical_guide_to_choosing_genomic_foundation/)  
+  - [Efficient Transformers: A Survey — arXiv](https://arxiv.org/abs/2009.06732)
+
+---
+
+### B4. Компьютерное зрение: от CNN до ViT, DeTR и SAM
+
+Эта лекция рассматривает задачи **классификации**, **детекции**, **сегментации** и **self‑supervised learning** в CV, с акцентом на современные архитектуры, которые можно применять к биомедицинским изображениям (микроскопия, гистология, 3D‑структуры).
+
+**Ключевые темы**
+
+- введение в CV: классификация, детекция, сегментация, 3D‑задачи;  
+- классические CNN (ResNet, ConvNeXt);  
+- архитектуры для сегментации (U‑Net);  
+- Vision Transformers (ViT, SWIN, DINO, CLIP), DETR‑подход к детекции;  
+- современные детекторы и сегментаторы (YOLO, SAM).
+
+**📚 Материалы для углубления**
+
+- **Лекция курса:**  
+  - «CV: ViT, Dino, CLIP, ConvNeXt, ResNet, U‑Net, SWIN, DeTR, YOLO, KD, SSL» (`8.CV.pdf`).  
+
+- **CNN и residual‑связи:**  
+  - [3Blue1Brown, «But what is a convolution?» — визуальное объяснение сверточных слоёв](https://www.youtube.com/watch?v=KuXjwB4LzSA)  
+  - [HSE Intro to DL, конспект «Convolutional Neural Networks»](https://github.com/isadrtdinov/intro-to-dl-hse/blob/2023-2024/lecture-notes/notes-04-convolution.pdf)  
+  - [Яндекс Образование, «Сверточные нейросети» (RU)](https://education.yandex.ru/handbook/ml/article/svyortochnye-nejroseti)  
+  - [Rokas Liuberskis, «ResNet Explained»](https://medium.com/@rokasliuberskis/resnet-explained-35b9d3f0e4b0)  
+  - [The Modern CNN — обзор архитектур (ConvNeXt, EfficientNet)](https://paperswithcode.com/methods/area/computer-vision)
+
+- **U‑Net и сегментация:**  
+  - [Harshall Lamba, «U‑Net Architecture Explained»](https://medium.com/analytics-vidhya/unet-architecture-explained-5c8f4d9e3e0d)  
+  - [Оригинальная статья U‑Net (University of Freiburg)](https://lmb.informatik.uni-freiburg.de/people/ronneber/u-net/)  
+  - [Medical Image Segmentation: A Review — arXiv](https://arxiv.org/abs/2005.10444)
+
+- **ViT и Transformers в CV:**  
+  - [Pinecone, «Vision Transformers: A Gentle Introduction»](https://www.pinecone.io/learn/series/image-search/vision-transformers/)  
+  - [Aritra Roy Gosthipaty, «Vision Transformer (ViT) — a comprehensive guide»](https://medium.com/@aritragosthipaty/vision-transformer-vit-a-comprehensive-guide-5c0f3b0f0b0d)  
+  - [A Survey of Visual Transformers — arXiv](https://arxiv.org/abs/2012.12556)  
+  - [DINO (self‑distillation with no labels) — Meta AI blog](https://ai.facebook.com/blog/dino-paws-computer-vision-with-self-supervised-transformers-and-10x-more-efficient-training/)
+
+- **DETR и детекция:**  
+  - [«Annotated DETR» — подробный блогпост с иллюстрациями и кодом](https://amaarora.github.io/posts/2021-07-26-annotateddetr.html)  
+  - [Habr, «DETR: новый взгляд на детекцию» (RU)](https://habr.com/ru/articles/736950)  
+  - [Aladdin Persson, видео «DETR Explained»](https://www.youtube.com/watch?v=T35ba_Vu9_o)
+
+- **YOLO, SAM и примеры:**  
+  - [Официальный сайт и демо SAM](https://segment-anything.com)  
+  - [LearnOpenCV, «YOLOv7 Explained»](https://learnopencv.com/yolov7-object-detection/)  
+  - [Rohit Kundu, «Segment Anything Model (SAM) Explained»](https://medium.com/@rohit.kundu/segment-anything-model-sam-explained-8c5f2c5a0b0d)  
+  - [Лекция/конспект «CV‑архитектуры: YOLO, U‑Net, ViT, SAM» (курс LSDSL)](https://github.com/isadrtdinov/lsdl-cub/blob/main/week03-cv-archs/lecture03-cv-archs.pdf)
+
+- **Self‑supervised CV:**  
+  - [Google Research blog, «Inceptionism: Going deeper into neural networks» — DeepDream и интерпретация CNN](https://blog.research.google/2015/06/inceptionism-going-deeper-into-neural.html)  
+  - [Self-supervised Learning in Computer Vision — обзор](https://arxiv.org/abs/2104.14545)
+
+---
+
+### B5. LLM и foundation‑модели для текста и биологии (BERT, DNABERT, NT, PEFT и др.)
+
+Финальная DL‑лекция собирает воедино идеи трансформеров и показывает, как они масштабируются до **LLM** и **foundation‑моделей**, в том числе для биологии. Обсуждаются архитектуры (BERT vs GPT‑класс), токенизация (BPE, k‑меры для ДНК), позиционные кодировки (RoPE, AliBi), методы эффективного дообучения (PEFT) и оптимизации внимания (FlashAttention) для длинных последовательностей.
+
+**Ключевые темы**
+
+- архитектуры LLM (encoder‑only, decoder‑only, encoder–decoder);  
+- токенизация (BPE, WordPiece, SentencePiece, k‑меры для ДНК);  
+- позиционные кодировки (sinusoidal, RoPE, AliBi);  
+- FlashAttention / FlashAttention‑2 и длинный контекст;  
+- PEFT (LoRA, prefix‑tuning и др.);  
+- BERT‑подобные модели для биологии (DNABERT, DNABERT‑2, Nucleotide Transformer, Geneformer и др.).
+
+**📚 Материалы для углубления**
+
+- **Лекция курса:**  
+  - «LLM: BERT, DNABERT, NT, PEFT, BPE, RoPE, AliBi, FlashAttention, LSSM» (`9.LLM.pdf`).  
+
+- **Общий ввод в LLM и трансформеры:**  
+  - [Jay Alammar, «The Illustrated GPT-2»](https://jalammar.github.io/illustrated-gpt2/)  
+  - [Jay Alammar, «The Illustrated BERT»](https://jalammar.github.io/illustrated-bert/)  
+  - [Lilian Weng, «How to Train Large Language Models»](https://lilianweng.github.io/posts/2023-01-27-train-llms/)  
+  - [Andrej Karpathy, видео «Let's build GPT: from scratch, in code, spelled out»](https://www.youtube.com/watch?v=kCc8FmEb1nY)  
+  - [Яндекс Образование, «Трансформеры и языковые модели» (RU)](https://education.yandex.ru/handbook/ml/article/transformery)  
+  - [Harvard NLP, «The Annotated Transformer»](https://nlp.seas.harvard.edu/2018/04/03/attention.html)  
+  - [A Survey of Large Language Models — arXiv](https://arxiv.org/abs/2303.18223)
+
+- **Позиционные кодировки (RoPE, AliBi):**  
+  - [EleutherAI, «Rotary Embeddings: A Relative Revolution»](https://blog.eleuther.ai/rotary-embeddings/)  
+  - [Ofir Press, «ALiBi — a simple and efficient relative position bias»](https://ofir.io/train-short-test-long/)  
+  - [RoFormer: Enhanced Transformer with Rotary Position Embedding — оригинал](https://arxiv.org/abs/2104.09864)
+
+- **FlashAttention и длинные контексты:**  
+  - [Galileo AI blog, «How FlashAttention Eliminates Transformer Memory Bottlenecks»](https://galileo.ai/blog/stanford-flashattention-algorithm)  
+  - [Stanford CRFM blog, «FlashAttention‑2: Faster Attention with Better Parallelism and Work Partitioning»](https://crfm.stanford.edu/2023/07/17/flash2.html)  
+  - [Less Wright, «FlashAttention — a step-by-step guide»](https://www.lesswrong.com/posts/3FhB5xqQ5qX5f5q5q/flashattention-a-step-by-step-guide)
+
+- **PEFT и LoRA:**  
+  - [Sebastian Raschka, «LoRA — a simple and powerful approach to fine-tuning LLMs»](https://magazine.sebastianraschka.com/p/lora-and-qlora-from-scratch)  
+  - [Hugging Face blog, «Parameter‑Efficient Fine‑Tuning using PEFT»](https://huggingface.co/blog/peft)  
+  - [Документация HF PEFT по LoRA](https://huggingface.co/docs/peft/package_reference/lora)  
+  - [QLoRA: Efficient Finetuning of Quantized LLMs — обзор](https://arxiv.org/abs/2305.14314)
+
+- **DNABERT‑класс и разборы:**  
+  - [Emergent Mind, «DNABERT: Transformer‑Based Genomic Models»](https://www.emergentmind.com/topics/dnabert)  
+  - [NVIDIA BioNeMo, «Generating and visualizing embeddings with DNABERT»](https://docs.nvidia.com/bionemo-framework/1.10/notebooks/dnabert_inference.html)  
+  - [BioLM, карточка «DNABERT‑2»](https://biolm.ai/models/dnabert2/)  
+  - [GitHub, «DNABERT‑2: Efficient Foundation Model and Benchmark for Multi‑species Genome»](https://github.com/MAGICS-LAB/DNABERT_2)  
+  - [BioBERT — обзор](https://arxiv.org/abs/1901.08746)  
+  - [ClinicalBERT — обзор](https://arxiv.org/abs/1904.05342)  
+  - [scBERT для single-cell](https://arxiv.org/abs/2107.11952)
+
+- **Nucleotide Transformer и выбор foundation‑модели:**  
+  - [InstaDeep blog, «Decoding our Genome with Nucleotide Transformers»](https://instadeep.com/2024/12/decoding-our-genome-with-nucleotide-transformers/)  
+  - [GitHub InstaDeep, «nucleotide-transformer»](https://github.com/instadeepai/nucleotide-transformer)  
+  - [Reddit, «A practical guide to choosing genomic foundation models»](https://www.reddit.com/r/bioinformatics/comments/1qolxvs/a_practical_guide_to_choosing_genomic_foundation/)
+
+- **Geneformer и другие био‑LLM:**  
+  - [Geneformer — краткое описание от авторов](https://www.geneformer.ai/)  
+  - [NVIDIA blog о Geneformer](https://blogs.nvidia.com/blog/geneformer-generative-ai-genomics/)  
+  - [Evo — модель для геномов от Together AI](https://together.ai/blog/evo)
+ 
+Вот дополненный блок B5 с информацией про SSM (State Space Models) и xLSTM, включая DNA-xLSTM:
+
+---
+
+### B5. LLM и foundation‑модели для текста и биологии (BERT, DNABERT, NT, SSM, xLSTM, PEFT и др.)
+
+Финальная DL‑лекция собирает воедино идеи трансформеров и показывает, как они масштабируются до **LLM** и **foundation‑моделей**, в том числе для биологии. Обсуждаются архитектуры (BERT vs GPT‑класс), токенизация (BPE, k‑меры для ДНК), позиционные кодировки (RoPE, AliBi), методы эффективного дообучения (PEFT) и оптимизации внимания (FlashAttention) для длинных последовательностей. Особое внимание уделяется современным альтернативам трансформерам — **State Space Models (SSM)** и **xLSTM**, которые обеспечивают линейную сложность вычислений и эффективно работают с длинными геномными последовательностями.
+
+**Ключевые темы**
+
+- архитектуры LLM (encoder‑only, decoder‑only, encoder–decoder);
+- токенизация (BPE, WordPiece, SentencePiece, k‑меры для ДНК);
+- позиционные кодировки (sinusoidal, RoPE, AliBi);
+- FlashAttention / FlashAttention‑2 и длинный контекст;
+- PEFT (LoRA, prefix‑tuning и др.);
+- BERT‑подобные модели для биологии (DNABERT, DNABERT‑2, Nucleotide Transformer, Geneformer и др.);
+- **State Space Models (SSM)** — архитектуры с линейной сложностью (S4, Mamba, Hyena);
+- **xLSTM и Bio-xLSTM** — расширение LSTM с экспоненциальными гейтами для конкуренции с трансформерами;
+- **DNA-xLSTM** — специализированная версия xLSTM для геномных последовательностей с обратно-комплементарной эквивариантностью.
+
+**📚 Материалы для углубления**
+
+- **Лекция курса:**  
+  - «LLM: BERT, DNABERT, NT, PEFT, BPE, RoPE, AliBi, FlashAttention, LSSM» (`9.LLM.pdf`).
+
+- **Общий ввод в LLM и трансформеры:**
+  - [Jay Alammar, «The Illustrated GPT-2»](https://jalammar.github.io/illustrated-gpt2/)
+  - [Jay Alammar, «The Illustrated BERT»](https://jalammar.github.io/illustrated-bert/)
+  - [Lilian Weng, «How to Train Large Language Models»](https://lilianweng.github.io/posts/2023-01-27-train-llms/)
+  - [Andrej Karpathy, видео «Let's build GPT: from scratch, in code, spelled out»](https://www.youtube.com/watch?v=kCc8FmEb1nY)
+  - [Яндекс Образование, «Трансформеры и языковые модели» (RU)](https://education.yandex.ru/handbook/ml/article/transformery)
+  - [Harvard NLP, «The Annotated Transformer»](https://nlp.seas.harvard.edu/2018/04/03/attention.html)
+  - [A Survey of Large Language Models — arXiv](https://arxiv.org/abs/2303.18223)
+
+- **Позиционные кодировки (RoPE, AliBi):**
+  - [EleutherAI, «Rotary Embeddings: A Relative Revolution»](https://blog.eleuther.ai/rotary-embeddings/)
+  - [Ofir Press, «ALiBi — a simple and efficient relative position bias»](https://ofir.io/train-short-test-long/)
+  - [RoFormer: Enhanced Transformer with Rotary Position Embedding — оригинал](https://arxiv.org/abs/2104.09864)
+
+- **FlashAttention и длинные контексты:**
+  - [Galileo AI blog, «How FlashAttention Eliminates Transformer Memory Bottlenecks»](https://galileo.ai/blog/stanford-flashattention-algorithm)
+  - [Stanford CRFM blog, «FlashAttention‑2: Faster Attention with Better Parallelism and Work Partitioning»](https://crfm.stanford.edu/2023/07/17/flash2.html)
+  - [Less Wright, «FlashAttention — a step-by-step guide»](https://www.lesswrong.com/posts/3FhB5xqQ5qX5f5q5q/flashattention-a-step-by-step-guide)
+
+- **PEFT и LoRA:**
+  - [Sebastian Raschka, «LoRA — a simple and powerful approach to fine-tuning LLMs»](https://magazine.sebastianraschka.com/p/lora-and-qlora-from-scratch)
+  - [Hugging Face blog, «Parameter‑Efficient Fine‑Tuning using PEFT»](https://huggingface.co/blog/peft)
+  - [Документация HF PEFT по LoRA](https://huggingface.co/docs/peft/package_reference/lora)
+  - [QLoRA: Efficient Finetuning of Quantized LLMs — обзор](https://arxiv.org/abs/2305.14314)
+
+- **State Space Models (SSM) — общее введение:**
+  - [Neptune.ai, «Introduction to State Space Models as Natural Language Models»](https://neptune.ai/blog/state-space-models-as-natural-language-models) — подробный разбор HiPPO, LSSL, S4 и S5 
+  - [The Annotated S4 — блог с реализацией S4 на JAX](https://srush.github.io/annotated-s4/)
+  - [HiPPO: Recurrent Memory with Optimal Polynomial Projections — оригинал](https://arxiv.org/abs/2008.07669)
+  - [Combining Recurrent, Convolutional, and Continuous-time Models with Linear State-Space Layers — оригинал LSSL](https://arxiv.org/abs/2110.13985)
+  - [Efficiently Modeling Long Sequences with Structured State Spaces (S4) — оригинал](https://arxiv.org/abs/2111.00396)
+
+- **Mamba и современные SSM:**
+  - [Mamba: Linear-Time Sequence Modeling with Selective State Spaces — оригинал](https://arxiv.org/abs/2312.00752)
+  - [The Annotated Mamba — блог с реализацией](https://srush.github.io/annotated-mamba/)
+  - [Mamba-2 — оригинал](https://arxiv.org/abs/2405.21060)
+
+- **Дополнительные обзоры:**  
+  - [Large language models in biology — Nature Reviews](https://www.nature.com/articles/s41576-023-00599-3)  
+  - [LLM for drug discovery](https://arxiv.org/abs/2303.08758)
 
 ---
 
