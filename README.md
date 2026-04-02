@@ -7,8 +7,8 @@
 - [План тем (био + DL)](#план-тем-био-dl)
 - [Записи 25/26](#записи-25-26)
 - [Preliminaries](#preliminaries)
-- [Machine Learning (База)](#machine-learning-база)
-- [Deep Learning (База)](#deep-learning-база)
+  - [Machine Learning (База)](#machine-learning-база)
+  - [Deep Learning (База)](#deep-learning-база)
 - [Навигация по директориям](#навигация-по-директориям)
 
 ***  
