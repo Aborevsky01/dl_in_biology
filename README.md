@@ -1,5 +1,17 @@
 # Deep Learning in Biology @ HSE FCS
 
+## Оглавление
+- [Структура репозитория](#структура-репозитория)
+- [Основная информация о курсе](#основная-информация-о-курсе)
+- [Блоки курса](#блоки-курса)
+- [План тем (био + DL)](#план-тем-био-dl)
+- [Записи 25/26](#записи-25-26)
+- [Preliminaries](#preliminaries)
+- [Machine Learning (База)](#machine-learning-база)
+- [Deep Learning (База)](#deep-learning-база)
+- [Навигация по директориям](#навигация-по-директориям)
+
+***  
 Курс по применению методов **deep** learning в биологии и медицине для студентов ФКН НИУ ВШЭ. [hse](https://www.hse.ru/edu/courses/858163775)
 
 ***
@@ -34,21 +46,34 @@
 ***
 
 ### План тем (био + DL)
+| № | Bio‑темы                                  | DL‑темы                                   | Материалы (Презентация / Семинар)                                                                 |
+|---|-------------------------------------------|-------------------------------------------|----------------------------------------------------------------------------------------------------|
+| 1 | Введение в молекулярную биологию, ДНК     | Введение в DL, мотивация в биологии       | [Лекция 1](lectures/1.DNA.pdf)                                                                    |
+| 2 | –                                         | Основы ML                                  | [Лекция 2](lectures/2.ML.pdf)                                                                     |
+| 3 | –                                         | Основы DL                                  | [Лекция 3](lectures/3.DL.pdf)                                                                     |
+| 4 | Хроматин, транскрипция                    | Модели для последовательностей (обзор)    | [Лекция 4](lectures/4.Chromatine.pdf)                                                             |
+| 5 | Пост‑транскрипция                         | CNN, LSTM для ДНК, mlflow                 | [Лекция 5](lectures/5.Post-Transcription.pdf), [Seminar DNA](seminars/Seminar_I_DNA_classification.ipynb) |
+| 6 | -                                         | NLP, Attention, Transformers              | [Лекция 6](lectures/6.NLP.pdf)                                                                    |
+| 7 | Трансляция                                | CNN XAI, GNN, optuna                      | [Лекция 7](lectures/7.Translation.pdf), [Seminar GNN](seminars/Seminar_2_GNN_for_ZDNA.ipynb)      |
+| 8 | Белки                                     | CV for Med, XAI, mlflow                   | [Презентация](), [Семинар]()                                                                      |
+| 9 | Белки, протеостаз                         | Advanced approaches (contrastive, self‑supervised) | [Презентация](), [Семинар]()                                                             |
+| 10 | Завершение молекулярного блока, med cases | Языковые модели, RL                       | [Презентация](), [Семинар]()                                                                      |
+| 11 | Анализ мозга                              | Повторение, диффузионные модели           | [Презентация](), [Семинар]()                                                                      |
 
-| № | Bio‑темы                                  | DL‑темы                                   | Материалы (Презентация / Семинар)                                                                 | Запись занятия |
-|---|-------------------------------------------|-------------------------------------------|----------------------------------------------------------------------------------------------------|----------------|
-| 1 | Введение в молекулярную биологию, ДНК     | Введение в DL, мотивация в биологии       | [Лекция 1](lectures/1.DNA.pdf)                                                                    | [Ссылка]()     |
-| 2 | –                                         | Основы ML                                  | [Лекция 2](lectures/2.ML.pdf)                                                                     | [Ссылка]()     |
-| 3 | –                                         | Основы DL                                  | [Лекция 3](lectures/3.DL.pdf)                                                                     | [Ссылка]()     |
-| 4 | Хроматин, транскрипция                    | Модели для последовательностей (обзор)    | [Лекция 4](lectures/4.Chromatine.pdf)                                                             | [Ссылка]()     |
-| 5 | Пост‑транскрипция                         | CNN, LSTM для ДНК, mlflow                 | [Лекция 5](lectures/5.Post-Transcription.pdf), [Seminar DNA](seminars/Seminar_I_DNA_classification.ipynb)                                                    | [Ссылка]()     |
-| 6 | -                                         | NLP, Attention, Transformers               | [Лекция 6](lectures/6.NLP.pdf)                                                     | [Ссылка]()     |
-| 7 | Трансляция                                | CNN XAI, GNN, optuna                      | [Лекция 7](lectures/7.Translation.pdf), [Seminar GNN](seminars/Seminar_2_GNN_for_ZDNA.ipynb)      | [Ссылка]()     |
-| 8 | Белки                                     | CV for Med, XAI, mlflow                   | [Презентация](), [Семинар]()                                                                      | [Ссылка]()     |
-| 9 | Белки, протеостаз                         | Advanced approaches (contrastive, self‑supervised) | [Презентация](), [Семинар]()                                                             | [Ссылка]()     |
-| 10 | Завершение молекулярного блока, med cases | Языковые модели, RL                       | [Презентация](), [Семинар]()                                                                      | [Ссылка]()     |
-| 11| Анализ мозга                              | Повторение, диффузионные модели           | [Презентация](), [Семинар]()                                                                      | [Ссылка]()     |
-| 12| EEG‑analysis, коллоквиум (extra)          | Дополнительные кейсы                      | [Презентация](), [Семинар]()                    | [Ссылка]()     |
+***
+
+## Записи 25/26
+
+1. [Занятие 1 - Введение в Deep Learning | Устройство ДНК](https://www.youtube.com/watch?v=pTArspUOpQ8&list=PLN-MxaR5MvGkhntj7szOJk5HoWJnP7hV0&index=1)
+2. [Занятие 2 - Хроматин | Транскрипция | Основы NLP](https://www.youtube.com/watch?v=6oLVx6Ai6V8&list=PLN-MxaR5MvGkhntj7szOJk5HoWJnP7hV0&index=4)
+3. [Занятие 3 - Attention | Трансформеры](https://www.youtube.com/watch?v=3q2QPFXBx6c&list=PLN-MxaR5MvGkhntj7szOJk5HoWJnP7hV0&index=3)
+4. [Занятие 4 - Классификация ДНК | Посттранскрипционные модификации](https://www.youtube.com/watch?v=1Qaq27Ya2dk&list=PLN-MxaR5MvGkhntj7szOJk5HoWJnP7hV0&index=2)
+5. [Занятие 5 - Графовые нейросети | Optuna](https://www.youtube.com/watch?v=CrmX0zkEs24&list=PLN-MxaR5MvGkhntj7szOJk5HoWJnP7hV0&index=5)
+6. [Занятие 6 - Компьютерное зрение | Self supervised learning](https://www.youtube.com/watch?v=AVDZAaliyxs&list=PLN-MxaR5MvGkhntj7szOJk5HoWJnP7hV0&index=6)
+7. [Занятие 7 - РНК | Трансляция | Структура белков](https://www.youtube.com/watch?v=XQOJUOn5YgE&list=PLN-MxaR5MvGkhntj7szOJk5HoWJnP7hV0&index=8)
+8. [Занятие 8 - Белки | XAI | Captum](https://www.youtube.com/watch?v=mYqqYesNyq8&list=PLN-MxaR5MvGkhntj7szOJk5HoWJnP7hV0&index=9)
+9. [Занятие 9 - LLM для ДНК | PEFT | Фолдинг белков](https://www.youtube.com/watch?v=G7lxr3C-crI&list=PLN-MxaR5MvGkhntj7szOJk5HoWJnP7hV0&index=7)
+
 
 ***
 
@@ -89,4 +114,4 @@
 
 - `homeworks/README.md`  
   - Перечень домашних заданий с кратким описанием.  
-  - Ссылки на формулировки и starter‑код. 
+  - Ссылки на формулировки и starter‑код. [github](https://github.com/Aborevsky01/dl_in_biology/edit/main/README.md)
