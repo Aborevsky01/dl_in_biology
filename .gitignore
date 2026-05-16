@@ -16,7 +16,60 @@ id_*
 *secret*
 *credentials*
 
+# macOS
 .DS_Store
+**/.DS_Store
+
+# Jupyter
 .ipynb_checkpoints
+**/.ipynb_checkpoints
+
+# PowerPoint / Keynote (не для публикации)
 *.pptx
+
+# Большие датасеты и файлы данных
+*.csv
+*.tsv
+*.parquet
+*.h5
+*.hdf5
+*.zarr
+*.pkl
+reg_elements.csv
+
+# Веса моделей и чекпоинты
+*.pth
+*.pt
+*.ckpt
+*.bin
+*.safetensors
+best_model*.pth
+best_gnn_params.pth
+
+# MLflow / W&B / эксперименты
+mlflow.db
+mlruns/
+wandb/
+mlflow_runs/
+
+# Python кэш
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# Виртуальные окружения
+.venv/
+venv/
+env/
+
+# Временные файлы
+*.log
+*.tmp
+*.swp
+.cache/
+
+# Submodule data (большие вложенные репо с данными)
+z_dna/hg38_features/
 

@@ -52,10 +52,10 @@
 | 2 | –                                         | Основы ML                                  | [Лекция 2](lectures/2.ML.pdf)                                                                     |
 | 3 | –                                         | Основы DL                                  | [Лекция 3](lectures/3.DL.pdf)                                                                     |
 | 4 | Хроматин, транскрипция                    | Модели для последовательностей (обзор)    | [Лекция 4](lectures/4.Chromatine.pdf)                                                             |
-| 5 | Пост‑транскрипция                         | CNN, LSTM для ДНК, mlflow                 | [Лекция 5](lectures/5.Post-Transcription.pdf), [Seminar DNA](seminars/Seminar_I_DNA_classification.ipynb) |
-| 6 | -                                         | NLP, Attention, Transformers              | [Лекция 6](lectures/6.NLP.pdf)                                                                    |
-| 7 | Трансляция                                | CNN XAI, GNN, optuna                      | [Лекция 7](lectures/7.Translation.pdf), [Seminar GNN](seminars/Seminar_2_GNN_for_ZDNA.ipynb)      |
-| 8 | Белки                                     | CV for Med, XAI, mlflow                   | [Презентация](), [Семинар]()                                                                      |
+| 5 | Пост‑транскрипция                         | CNN, LSTM для ДНК, mlflow                 | [Лекция 5](lectures/5.Translation.pdf), [Seminar DNA](seminars/2.DNA.MLflow.ipynb) |
+| 6 | -                                         | NLP, Attention, Transformers              | [Лекция 6](lectures/6.NLP.pdf), [Seminar Transformer](seminars/1.Transformer.ipynb) |
+| 7 | Трансляция                                | GNN, optuna                               | [Лекция 7](lectures/7.Proteins.pdf), [Seminar GNN](seminars/3.Gnn.Optuna.ipynb)      |
+| 8 | Белки                                     | CV for Med, XAI, mlflow                   | [Лекция 8](lectures/8.CV.pdf), [Seminar CV](seminars/4.CV.MedImaging.ipynb)                                                                      |
 | 9 | Белки, протеостаз                         | Advanced approaches (contrastive, self‑supervised) | [Презентация](), [Семинар]()                                                             |
 | 10 | Завершение молекулярного блока, med cases | Языковые модели, RL                       | [Презентация](), [Семинар]()                                                                      |
 | 11 | Анализ мозга                              | Повторение, диффузионные модели           | [Презентация](), [Семинар]()                                                                      |
@@ -73,7 +73,6 @@
 7. [Занятие 7 - РНК | Трансляция | Структура белков](https://www.youtube.com/watch?v=XQOJUOn5YgE&list=PLN-MxaR5MvGkhntj7szOJk5HoWJnP7hV0&index=8)
 8. [Занятие 8 - Белки | XAI | Captum](https://www.youtube.com/watch?v=mYqqYesNyq8&list=PLN-MxaR5MvGkhntj7szOJk5HoWJnP7hV0&index=9)
 9. [Занятие 9 - LLM для ДНК | PEFT | Фолдинг белков](https://www.youtube.com/watch?v=G7lxr3C-crI&list=PLN-MxaR5MvGkhntj7szOJk5HoWJnP7hV0&index=7)
-
 
 ***
 

@@ -15,8 +15,18 @@
   - [A5. Посттранскрипционная обработка РНК](#a5-посттранскрипционная-обработка-рнк)  
   - [A6. Типы РНК и транспорт мРНК](#a6-типы-рнк-и-транспорт-мрнк)  
   - [A7. Трансляция](#a7-трансляция)  
+  - [A8. Строение белка](#a8-строение-белка) 🚧  
+  - [A9. Функции белков и белок-белковые взаимодействия](#a9-функции-белков-и-белок-белковые-взаимодействия) 🚧  
+  - [A10. Фолдинг белка и протеостаз](#a10-фолдинг-белка-и-протеостаз) 🚧  
   - [Глоссарий](#глоссарий)  
-- [Блок B: Deep Learning 🤖](#блок-b-deep-learning-) *(в разработке)*  
+- [Блок B: Deep Learning 🤖](#блок-b-deep-learning-)
+  - [B1. Вводная в Deep Learning: от линейных моделей до сверточных и рекуррентных сетей](#b1-вводная-в-deep-learning-от-линейных-моделей-до-сверточных-и-рекуррентных-сетей)
+  - [B2. Графовые нейросети (GNN) и биологические графы](#b2-графовые-нейросети-gnn-и-биологические-графы)
+  - [B3. NLP, Attention и Transformers (включая ДНК‑последовательности)](#b3-nlp-attention-и-transformers-включая-днк-последовательности)
+  - [B4. Компьютерное зрение: от CNN до ViT, DeTR и SAM](#b4-компьютерное-зрение-от-cnn-до-vit-detr-и-sam)
+  - [B5. LLM и foundation‑модели для текста и биологии (BERT, DNABERT, NT, SSM, xLSTM, PEFT и др.)](#b5-llm-и-foundationмодели-для-текста-и-биологии-bert-dnabert-nt-ssm-xlstm-peft-и-др)
+  - [B6. Объяснимый ИИ (XAI) в биологии](#b6-объяснимый-ии-xai-в-биологии) 🚧  
+  - [B7. Reinforcement Learning и диффузионные модели](#b7-reinforcement-learning-и-диффузионные-модели) 🚧
 - [Как использовать этот раздел](#как-использовать-этот-раздел)
 
 ---
@@ -194,7 +204,7 @@
 
 **📚 Материалы для углубления:**  
 
-- **Лекция курса:** «Посттранскрипционные модификации РНК и типы РНК.» (`5.Post-Transcription.pdf`).  
+- **Лекция курса:** «Посттранскрипционные модификации РНК и типы РНК.» (`5.Translation.pdf`).  
 - **Обзор (RU):** [«мРНКааауу»](https://biomolecula.ru/articles/mrnkaaaauu) — популярное введение в устройство мРНК, кэп, поли-А и их роль. [biomolecula](https://biomolecula.ru/specials/epigenetika)
 - **Обзор (RU):** [«Альтернативная «сварка» мРНК: как из одного гена получается несколько белков»](https://biomolecula.ru/articles/alternativnaia-svarka-mrnk-kak-iz-odnogo-gena-poluchaetsia-neskolko-belkov) — подробный разбор альтернативного сплайсинга. [biomolecula](https://biomolecula.ru/specials/epigenetika)
 - **Обзор (RU):** [«Процессы и эпигеном»](https://biomolecula.ru/articles/protsessy-i-epigenom) — обзор процессов от транскрипции до деградации мРНК в контексте эпигенома. [biomolecula](https://biomolecula.ru/specials/epigenetika)
@@ -218,7 +228,7 @@
 
 **📚 Материалы для углубления:**  
 
-- **Лекция курса:** раздел о типах РНК и экспорте в `5.Post-Transcription.pdf`.  
+- **Лекция курса:** раздел о типах РНК и экспорте в `5.Translation.pdf`.  
 - **Обзор (RU):** [«мРНКааауу»](https://biomolecula.ru/articles/mrnkaaaauu) — обзор типов и устройства мРНК. [biomolecula](https://biomolecula.ru/specials/epigenetika)
 - **Обзор (RU):** [«Транспортная мРНК»](https://biomolecula.ru/articles/transportnaia-mrnk) — обзор механизмов экспорта мРНК из ядра и транспорта в цитоплазме. [biomolecula](https://biomolecula.ru/specials/epigenetika)
 - **Справочник (EN):** [List of RNAs (Wikipedia)](https://en.wikipedia.org/wiki/List_of_RNAs) — компактный перечень типов РНК и их функций. [en.wikipedia](https://en.wikipedia.org/wiki/List_of_RNAs)
@@ -240,9 +250,47 @@
 
 **📚 Материалы для углубления:**  
 
-- **Лекция курса:** «Трансляция и GNN» (`7.Translation.pdf`).  
+- **Лекция курса:** «Трансляция и GNN» (`7.Proteins.pdf`).  
 - **Учебные ресурсы (EN):** [Khan Academy – tRNAs and ribosomes](https://www.khanacademy.org/test-prep/mcat/biomolecules/transcription-and-translation/v/trnas-and-ribosomes) — статья о том, как рибосома «сканирует» мРНК и переводит кодоны в аминокислоты.  
 - **Видеоуроки:** *Hybrid Medical Animation* — анимация процесса трансляции (англ.), например [Translation (mRNA to Protein)](https://www.youtube.com/watch?v=1Hym9mjkXmY).  
+
+***
+
+### A8. Строение белка
+
+> 🚧 *Раздел в процессе написания.* Материалы — лекция `7.Proteins.pdf`.
+
+Белок — полимерная цепь аминокислот, принимающая специфическую 3D-конформацию. Четыре уровня структуры: первичная (последовательность), вторичная (α-спирали, β-листы), третичная (общая укладка), четвертичная (несколько цепей). Для DL: структурные базы данных (PDB, AlphaFold DB) — источник обучающих данных для задач предсказания структуры и функции.
+
+**📚 Материалы для углубления:**
+- **Лекция курса:** «Строение белков» (`7.Proteins.pdf`).
+- [Khan Academy — Protein structure](https://www.khanacademy.org/science/biology/macromolecules/proteins-and-amino-acids/a/orders-of-protein-structure)
+- [Biomolecula — Белок: структура](https://biomolecula.ru/articles/belok-struktura-i-svoistva)
+
+---
+
+### A9. Функции белков и белок-белковые взаимодействия
+
+> 🚧 *Раздел в процессе написания.* Материалы — лекция `7.Proteins.pdf`.
+
+Белки выполняют каталитические, структурные, регуляторные, транспортные и сигнальные функции. Белок-белковые взаимодействия (PPI) формируют функциональные комплексы и сигнальные каскады. Для DL: PPI-сети моделируются через GNN, предсказание функции белка — задача классификации по последовательности/структуре.
+
+**📚 Материалы для углубления:**
+- **Лекция курса:** «Функции белков» (`7.Proteins.pdf`).
+- [STRING database (PPI networks)](https://string-db.org/)
+
+---
+
+### A10. Фолдинг белка и протеостаз
+
+> 🚧 *Раздел в процессе написания.* Материалы — лекция `7.Proteins.pdf`.
+
+Фолдинг — процесс принятия белком нативной 3D-конформации при участии шаперонов. AlphaFold2 решил задачу предсказания структуры по последовательности с атомарной точностью. Протеостаз — клеточный баланс синтеза, фолдинга и деградации белков.
+
+**📚 Материалы для углубления:**
+- **Лекция курса:** «Фолдинг и протеостаз» (`7.Proteins.pdf`).
+- [AlphaFold2 — DeepMind](https://www.deepmind.com/research/highlighted-research/alphafold)
+- [AlphaFold2 paper — Nature 2021](https://www.nature.com/articles/s41586-021-03819-2)
 
 ***
 ### Глоссарий
@@ -535,72 +583,6 @@
 
 ---
 
-### B5. LLM и foundation‑модели для текста и биологии (BERT, DNABERT, NT, PEFT и др.)
-
-Финальная DL‑лекция собирает воедино идеи трансформеров и показывает, как они масштабируются до **LLM** и **foundation‑моделей**, в том числе для биологии. Обсуждаются архитектуры (BERT vs GPT‑класс), токенизация (BPE, k‑меры для ДНК), позиционные кодировки (RoPE, AliBi), методы эффективного дообучения (PEFT) и оптимизации внимания (FlashAttention) для длинных последовательностей.
-
-**Ключевые темы**
-
-- архитектуры LLM (encoder‑only, decoder‑only, encoder–decoder);  
-- токенизация (BPE, WordPiece, SentencePiece, k‑меры для ДНК);  
-- позиционные кодировки (sinusoidal, RoPE, AliBi);  
-- FlashAttention / FlashAttention‑2 и длинный контекст;  
-- PEFT (LoRA, prefix‑tuning и др.);  
-- BERT‑подобные модели для биологии (DNABERT, DNABERT‑2, Nucleotide Transformer, Geneformer и др.).
-
-**📚 Материалы для углубления**
-
-- **Лекция курса:**  
-  - «LLM: BERT, DNABERT, NT, PEFT, BPE, RoPE, AliBi, FlashAttention, LSSM» (`9.LLM.pdf`).  
-
-- **Общий ввод в LLM и трансформеры:**  
-  - [Jay Alammar, «The Illustrated GPT-2»](https://jalammar.github.io/illustrated-gpt2/)  
-  - [Jay Alammar, «The Illustrated BERT»](https://jalammar.github.io/illustrated-bert/)  
-  - [Lilian Weng, «How to Train Large Language Models»](https://lilianweng.github.io/posts/2023-01-27-train-llms/)  
-  - [Andrej Karpathy, видео «Let's build GPT: from scratch, in code, spelled out»](https://www.youtube.com/watch?v=kCc8FmEb1nY)  
-  - [Яндекс Образование, «Трансформеры и языковые модели» (RU)](https://education.yandex.ru/handbook/ml/article/transformery)  
-  - [Harvard NLP, «The Annotated Transformer»](https://nlp.seas.harvard.edu/2018/04/03/attention.html)  
-  - [A Survey of Large Language Models — arXiv](https://arxiv.org/abs/2303.18223)
-
-- **Позиционные кодировки (RoPE, AliBi):**  
-  - [EleutherAI, «Rotary Embeddings: A Relative Revolution»](https://blog.eleuther.ai/rotary-embeddings/)  
-  - [Ofir Press, «ALiBi — a simple and efficient relative position bias»](https://ofir.io/train-short-test-long/)  
-  - [RoFormer: Enhanced Transformer with Rotary Position Embedding — оригинал](https://arxiv.org/abs/2104.09864)
-
-- **FlashAttention и длинные контексты:**  
-  - [Galileo AI blog, «How FlashAttention Eliminates Transformer Memory Bottlenecks»](https://galileo.ai/blog/stanford-flashattention-algorithm)  
-  - [Stanford CRFM blog, «FlashAttention‑2: Faster Attention with Better Parallelism and Work Partitioning»](https://crfm.stanford.edu/2023/07/17/flash2.html)  
-  - [Less Wright, «FlashAttention — a step-by-step guide»](https://www.lesswrong.com/posts/3FhB5xqQ5qX5f5q5q/flashattention-a-step-by-step-guide)
-
-- **PEFT и LoRA:**  
-  - [Sebastian Raschka, «LoRA — a simple and powerful approach to fine-tuning LLMs»](https://magazine.sebastianraschka.com/p/lora-and-qlora-from-scratch)  
-  - [Hugging Face blog, «Parameter‑Efficient Fine‑Tuning using PEFT»](https://huggingface.co/blog/peft)  
-  - [Документация HF PEFT по LoRA](https://huggingface.co/docs/peft/package_reference/lora)  
-  - [QLoRA: Efficient Finetuning of Quantized LLMs — обзор](https://arxiv.org/abs/2305.14314)
-
-- **DNABERT‑класс и разборы:**  
-  - [Emergent Mind, «DNABERT: Transformer‑Based Genomic Models»](https://www.emergentmind.com/topics/dnabert)  
-  - [NVIDIA BioNeMo, «Generating and visualizing embeddings with DNABERT»](https://docs.nvidia.com/bionemo-framework/1.10/notebooks/dnabert_inference.html)  
-  - [BioLM, карточка «DNABERT‑2»](https://biolm.ai/models/dnabert2/)  
-  - [GitHub, «DNABERT‑2: Efficient Foundation Model and Benchmark for Multi‑species Genome»](https://github.com/MAGICS-LAB/DNABERT_2)  
-  - [BioBERT — обзор](https://arxiv.org/abs/1901.08746)  
-  - [ClinicalBERT — обзор](https://arxiv.org/abs/1904.05342)  
-  - [scBERT для single-cell](https://arxiv.org/abs/2107.11952)
-
-- **Nucleotide Transformer и выбор foundation‑модели:**  
-  - [InstaDeep blog, «Decoding our Genome with Nucleotide Transformers»](https://instadeep.com/2024/12/decoding-our-genome-with-nucleotide-transformers/)  
-  - [GitHub InstaDeep, «nucleotide-transformer»](https://github.com/instadeepai/nucleotide-transformer)  
-  - [Reddit, «A practical guide to choosing genomic foundation models»](https://www.reddit.com/r/bioinformatics/comments/1qolxvs/a_practical_guide_to_choosing_genomic_foundation/)
-
-- **Geneformer и другие био‑LLM:**  
-  - [Geneformer — краткое описание от авторов](https://www.geneformer.ai/)  
-  - [NVIDIA blog о Geneformer](https://blogs.nvidia.com/blog/geneformer-generative-ai-genomics/)  
-  - [Evo — модель для геномов от Together AI](https://together.ai/blog/evo)
- 
-Вот дополненный блок B5 с информацией про SSM (State Space Models) и xLSTM, включая DNA-xLSTM:
-
----
-
 ### B5. LLM и foundation‑модели для текста и биологии (BERT, DNABERT, NT, SSM, xLSTM, PEFT и др.)
 
 Финальная DL‑лекция собирает воедино идеи трансформеров и показывает, как они масштабируются до **LLM** и **foundation‑моделей**, в том числе для биологии. Обсуждаются архитектуры (BERT vs GPT‑класс), токенизация (BPE, k‑меры для ДНК), позиционные кодировки (RoPE, AliBi), методы эффективного дообучения (PEFT) и оптимизации внимания (FlashAttention) для длинных последовательностей. Особое внимание уделяется современным альтернативам трансформерам — **State Space Models (SSM)** и **xLSTM**, которые обеспечивают линейную сложность вычислений и эффективно работают с длинными геномными последовательностями.
@@ -662,6 +644,41 @@
 - **Дополнительные обзоры:**  
   - [Large language models in biology — Nature Reviews](https://www.nature.com/articles/s41576-023-00599-3)  
   - [LLM for drug discovery](https://arxiv.org/abs/2303.08758)
+
+---
+
+### B6. Объяснимый ИИ (XAI) в биологии
+
+> 🚧 *Раздел в процессе написания.* Материалы — лекция `8.CV.pdf`, семинар `seminars/5.XAI.ipynb`.
+
+XAI-методы позволяют интерпретировать решения нейросетей: почему модель предсказала именно этот класс, какие признаки важны. Для биологии это критично — нужно не только предсказание, но и биологическая интерпретация.
+
+**Ключевые темы:** Gradient-based saliency maps, GradCAM, SHAP, LIME, Integrated Gradients, attention rollout.
+
+**📚 Материалы для углубления:**
+- **Семинар:** `seminars/5.XAI.ipynb` — практика XAI-методов.
+- [Lilian Weng, «Attention is Not Explanation»](https://lilianweng.github.io/posts/2020-04-07-the-transformer-family/)
+- [SHAP — официальная документация](https://shap.readthedocs.io/en/latest/)
+- [Captum — библиотека XAI для PyTorch](https://captum.ai/)
+- [GradCAM paper — arXiv](https://arxiv.org/abs/1610.02391)
+- [Integrated Gradients paper — arXiv](https://arxiv.org/abs/1703.01365)
+
+---
+
+### B7. Reinforcement Learning и диффузионные модели
+
+> 🚧 *Раздел в процессе написания.* Материалы — лекции 10–11.
+
+**RL в биологии:** оптимизация молекулярного дизайна (drug discovery), управление синтезом, RLHF для тонкой настройки LLM. Базовые понятия: agent, environment, reward, policy, Q-learning, PPO.
+
+**Диффузионные модели:** generative модели, основанные на постепенном зашумлении и денойзинге (DDPM, DDIM). Применения в биологии: генерация молекул (RFdiffusion для белков), синтетические изображения для аугментации медицинских датасетов.
+
+**📚 Материалы для углубления:**
+- [Lilian Weng, «What are Diffusion Models?»](https://lilianweng.github.io/posts/2021-07-11-diffusion-models/)
+- [Andrej Karpathy, «Deep Reinforcement Learning: Pong from Pixels»](http://karpathy.github.io/2016/05/31/rl/)
+- [RFdiffusion — protein design](https://www.ipd.uw.edu/2023/07/rfdiffusion-now-freely-available-for-protein-design/)
+- [DDPM paper — arXiv](https://arxiv.org/abs/2006.11239)
+- [OpenAI Spinning Up in RL](https://spinningup.openai.com/en/latest/)
 
 ---
 
